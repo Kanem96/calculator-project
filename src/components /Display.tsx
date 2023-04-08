@@ -1,13 +1,15 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent } from "react";
 
 interface DisplayProps {
-    calculation: string
+  calculation: string;
 }
 
-const Display: FunctionComponent<DisplayProps> = ({calculation}) => {
+const Display: FunctionComponent<DisplayProps> = ({ calculation }) => {
   return (
-    <div className='display'>{calculation}</div>
-  )
-}
+    <div className="display">
+      <p className="calculation">{calculation}</p>
+    </div>
+  );
+};
 
-export default Display
+export default Display;
