@@ -20,3 +20,32 @@
   box-shadow: inset 0 -4px 12px rgb(73, 73, 73);
   border-radius: 6px;
 }
+
+.button_container {
+  margin: 18px 18px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.button {
+  background-color: #d7d1da;
+  color: black;
+  border: none;
+  padding: 10px;
+  font-size: 15.5px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.button:nth-child(19) {
+  grid-column: span 2; /* span 2 columns */
+  grid-row: span 1; /* span 1 row */
+}
+
+.button:hover {
+  background: #ac89c0;
+  color: white;
+  box-shadow: inset 0 0 8px -5px rgb(73, 73, 73);
+}
