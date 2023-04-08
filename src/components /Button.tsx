@@ -22,19 +22,16 @@ const Button: FunctionComponent<ButtonProps> = ({
 
   const handleCalculation = () => {
     const calculationCopy: string[] = calculation?.split(/([+\–\x\÷])/) || [""];
-    let total: number = 0;
-    console.log(calculationCopy, "calcCopy");
+    let result: number = 0;
     for (let i = 0; i < calculationCopy.length; i++) {
       let current = calculationCopy[i];
-      console.log(current, "current");
-      if (i === 0) total += Number(current);
-      else if (current === "+") total += Number(calculationCopy[i + 1]);
-      else if (current === "–") total -= Number(calculationCopy[i + 1]);
-      else if (current === "x") total *= Number(calculationCopy[i + 1]);
-      else if (current === "÷") total /= Number(calculationCopy[i + 1]);
-      console.log(total, "total");
+      if (i === 0) result += Number(current);
+      else if (current === "+") result += Number(calculationCopy[i + 1]);
+      else if (current === "–") result -= Number(calculationCopy[i + 1]);
+      else if (current === "x") result *= Number(calculationCopy[i + 1]);
+      else if (current === "÷") result /= Number(calculationCopy[i + 1]);
     }
-    setCalculation(total.toString());
+    setCalculation(result.toString());
   };
 
   return (
