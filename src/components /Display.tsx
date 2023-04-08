@@ -1,8 +1,12 @@
 import { FunctionComponent } from 'react'
 
-const Display: FunctionComponent = () => {
+interface DisplayProps {
+    calculation: string
+}
+
+const Display: FunctionComponent<DisplayProps> = ({calculation}) => {
   return (
-    <div className='display'>Display</div>
+    <div className='display'>{calculation}</div>
   )
 }
 
